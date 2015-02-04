@@ -42,7 +42,7 @@
 // this method will get called every half second when you hit the play button and will stop getting called when you hi the pause button
 - (void)step
 {
-    NSAssert([_grid isKindOfClass:[CCSprite class]], @"Return value is not of type Grid as expected.");
+    NSAssert([_grid isKindOfClass:[Grid class]], @"_grid is not of type Grid as expected.");
     
     [_grid evolveStep];
     _generationLabel.string = [NSString stringWithFormat:@"%d", _grid.generation];
