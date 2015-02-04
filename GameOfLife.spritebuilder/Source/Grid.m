@@ -87,6 +87,8 @@ static const int GRID_COLUMNS = 10;
 
 -(void)evolveStep
 {
+    
+    NSLog(@"step");
     //update each Creature's neighbor count
     [self countNeighbors];
     
