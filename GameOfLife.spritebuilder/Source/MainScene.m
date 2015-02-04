@@ -29,7 +29,7 @@
 
 - (void)play
 {
-        NSAssert([_grid isKindOfClass:[Grid class]], @"_grid is not of type Grid as expected.");
+        //NSAssert([_grid isKindOfClass:[Grid class]], @"_grid is not of type Grid as expected.");
     //this tells the game to call a method called 'step' every half second.
     [self schedule:@selector(step) interval:0.5f];
 }
@@ -42,11 +42,11 @@
 // this method will get called every half second when you hit the play button and will stop getting called when you hi the pause button
 - (void)step
 {
-    NSAssert([_grid isKindOfClass:[Grid class]], @"_grid is not of type Grid as expected.");
+    //NSAssert([_grid isKindOfClass:[Grid class]], @"_grid is not of type Grid as expected.");
     
-    [_grid evolveStep];
-    _generationLabel.string = [NSString stringWithFormat:@"%d", _grid.generation];
-    _populationLabel.string = [NSString stringWithFormat:@"%d", _grid.totalAlive];
+    [(Grid*)_grid evolveStep];
+    _generationLabel.string = [NSString stringWithFormat:@"%d", ((Grid*)_grid).generation];
+    _populationLabel.string = [NSString stringWithFormat:@"%d", ((Grid*)_grid).totalAlive];
 }
 
 @end
