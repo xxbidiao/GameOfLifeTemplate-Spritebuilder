@@ -44,9 +44,9 @@
 {
     //NSAssert([_grid isKindOfClass:[Grid class]], @"_grid is not of type Grid as expected.");
     
-    [(Grid*)_grid evolveStep];
-    _generationLabel.string = [NSString stringWithFormat:@"%d", ((Grid*)_grid).generation];
-    _populationLabel.string = [NSString stringWithFormat:@"%d", ((Grid*)_grid).totalAlive];
+    [_grid evolveStep];
+    _generationLabel.string = [NSString stringWithFormat:@"%d", (_grid).generation];
+    _populationLabel.string = [NSString stringWithFormat:@"%d", (_grid).totalAlive];
 }
 
 @end

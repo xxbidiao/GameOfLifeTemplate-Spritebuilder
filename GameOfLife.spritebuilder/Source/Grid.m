@@ -66,6 +66,7 @@ static const int GRID_COLUMNS = 10;
 
 - (void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
 {
+    NSAssert([self isKindOfClass:[Grid class]], @"_grid is not of type Grid as expected.");
     //get the x,y coordinates of the touch
     CGPoint touchLocation = [touch locationInNode:self];
     
