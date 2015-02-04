@@ -29,6 +29,7 @@
 
 - (void)play
 {
+        NSAssert([_grid isKindOfClass:[Grid class]], @"_grid is not of type Grid as expected.");
     //this tells the game to call a method called 'step' every half second.
     [self schedule:@selector(step) interval:0.5f];
 }
