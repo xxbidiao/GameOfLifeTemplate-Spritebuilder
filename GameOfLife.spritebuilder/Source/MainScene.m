@@ -21,6 +21,7 @@
     self = [super init];
     
     if (self) {
+        _grid = [[Grid alloc] init];
         _timer = [[CCTimer alloc] init];
     }
     
